@@ -54,7 +54,7 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 **HINT:** search type 1 vs type 2 slowly changing dimensions. 
 
 
-## CUSTOMER_ADDRESS - Type 1 SCD
+#### Type 1 SCD
 This type will overwrite the changes. When a customer address is changed, the corresponding record in this table will be updated to reflect the changes.
 | customer_address  | 
 | ------------- | 
@@ -66,7 +66,7 @@ This type will overwrite the changes. When a customer address is changed, the co
 | customer_province  | 
 | customer_country  | 
 
-## CUSTOMER_ADDRESS - Type 2 SCD
+#### Type 2 SCD
 This type will retain the history. When a customer address is changed, a new record will be created and **current_address_flag** will be updated as **1** for the new row and **0** for the previous row.
 
 | customer_address  | 
